@@ -8,7 +8,6 @@ public class Demo01Date {
         methodMills();
         methodMills2();
         methodDate();
-
     }
 
     public static void methodMills() {
