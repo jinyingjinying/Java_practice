@@ -25,7 +25,7 @@ public class Test01 {
         //  3.  遍历字符串得到每个字符。
         //  4.  判断Map中是否有该键。
         //  5.  如果没有，第一次出现，存储次数为1；如果有，则说明已经出现过，获取到对应的值进行++，再次存储。
-        for (char c : str.toCharArray()) {
+        for (char c : str.toCharArray()) {      //str.toCharArray()
             if (map.containsKey(c)) {
                 Integer value = map.get(c);
                 value ++;
