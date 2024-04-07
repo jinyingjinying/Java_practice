@@ -1,27 +1,26 @@
 package Test;
 
-/*
-* 定义一个方法，要求此方法把int数组转成存有相同元素的集合
-* (集合里面的元素是Integer)，并返回。()
-* */
-
-import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.List;
 
+// 向list集合添加姓名{张三,李四,王五,二丫,钱六,孙七}
+// 将二丫替换为王小丫。
 public class Test02 {
     public static void main(String[] args) {
-        int[] array = { 1, 2, 3, 4, 5 };
-        System.out.println(array);          //[I@7ef20235
-        ArrayList<Integer> list = new ArrayList<>();
-        list = intToArrayList(array);
-        System.out.println(list);           //[1, 2, 3, 4, 5]
-    }
-
-    public static ArrayList<Integer> intToArrayList(int[] array) {
-        ArrayList<Integer> list = new ArrayList<>();
-        for (int a: array) {
-            list.add(a);
+        List<String> list = new ArrayList<>();
+        list.add("张三");
+        list.add("李四");
+        list.add("王五");
+        list.add("二丫");
+        list.add("钱六");
+        list.add("孙七");
+        System.out.println(list);
+        for (int i = 0; i < list.size(); i++) {
+            String name = list.get(i);
+            if (name.equals("二丫")){
+                list.set(i,"王小丫");
+            }
         }
-        return list;
+        System.out.println(list);
     }
 }

@@ -1,25 +1,23 @@
 package Test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-/*
-* 定义一个方法listTest(ArrayList<String> al, String s)
-* 要求使用contains()方法判断al集合里面是否包含s。
-* */
-
+// ArrayList集合中有如下内容： {33,11,77,55}，
+// 使用Collections.sort()对ArrayList集合中的数据进行排序，
+// 并打印出排序后的结果
 public class Test04 {
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<>();
-        list.add("hello");
-        list.add("world");
-        list.add("java");
-        System.out.println(listTest(list, "java"));
-    }
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(33);
+        list.add(11);
+        list.add(77);
+        list.add(55);
 
-    public static boolean listTest(ArrayList<String> al, String s) {
-        if (al.contains(s)) {
-            return true;
+        Collections.sort(list);
+
+        for(Integer i:list) {
+            System.out.println(i);
         }
-        return false;
     }
 }
